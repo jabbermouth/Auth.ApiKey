@@ -1,5 +1,5 @@
 ﻿# Overview
-This package contains code and extension methods to make the process of API key authentication to an API, including to yor Swagger definition, straightforward by removing a lot of the boilerplate code.
+This package contains code and extension methods to make the process of adding API key authentication to an API, including to your Swagger/Swashbuckle definition, straightforward by removing a lot of the boilerplate code.
 
 ## Setup
 ### SwaggerGen
@@ -49,7 +49,7 @@ Finally, add a section to appsettings.json (or another file, User Secrets, etc..
 Add the `[Authorize]` attribute before the controller or endpoint you wish to protect.
 
 ### Minimal APIs
-Either add the `[Authorize]` attribute before the `()` of the handler declaration:
+Method one is to add the `[Authorize]` attribute before the `()` of the handler declaration:
 ```
 app.MapGet("/hellosecureworld", [Authorize] () =>
 {
@@ -57,7 +57,7 @@ app.MapGet("/hellosecureworld", [Authorize] () =>
 })
 ```
 
-Alternative, after the declaration, add a `RequireAuthorization()` call after declaring the endpoint:
+Alternativly, after the declaration, add a `RequireAuthorization()` call after declaring the endpoint:
 ```
 app.MapGet("/hellosecureworld", () =>
 {
