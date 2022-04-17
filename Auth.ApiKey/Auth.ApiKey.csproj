@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Auth.ApiKey</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Neil Docherty</Authors>
+    <Company>Jabbermouth</Company>
+    <Description>Easily add API authentication including an Authorize button to your Swagger definition</Description>
+    <ProjectUrl>https://github.com/jabbermouth/Auth.ApiKey</ProjectUrl>
+
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
+  </ItemGroup>
+
+</Project>
